@@ -51,6 +51,11 @@ Sortie attendue:
 */
 
 function getStudentsPerCurriculum(campuses, curriculumName) {
+  return campuses.filter(function (curr){
+    return curr.curriculums.length>=2;
+  }).map(function (map){
+    return map.city +  map.curriculums[0].numStudents;
+  })
 }
 
 module.exports = getStudentsPerCurriculum;

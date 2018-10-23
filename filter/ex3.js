@@ -24,6 +24,9 @@ Sortie attendue:
  */
 
 function keepStarks(names) {
+  return names.filter(function (names){
+    return names.endsWith("Stark")
+  })
 }
 
 // Ne pas modifier l'export
